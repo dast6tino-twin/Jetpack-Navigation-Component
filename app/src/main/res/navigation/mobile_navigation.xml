@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_graph_login">
+
+    <navigation
+        android:id="@+id/navigation_graph_login"
+        android:label="login"
+        app:startDestination="@id/loginFlowFragment">
+        <fragment
+            android:id="@+id/loginFlowFragment"
+            android:name="ru.dast_6_tino.androidx_navigation_example.login.LoginFlowFragment"
+            android:label="fragment_login_flow"
+            tools:layout="@layout/fragment_login_flow">
+            <action
+                android:id="@+id/action_loginFlowFragment_to_signInFragment"
+                app:destination="@id/signInFragment" />
+            <action
+                android:id="@+id/action_loginFlowFragment_to_signUpFragment"
+                app:destination="@id/signUpFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/signInFragment"
+            android:name="ru.dast_6_tino.androidx_navigation_example.login.SignInFragment"
+            android:label="fragment_sign_in"
+            tools:layout="@layout/fragment_sign_in" />
+        <fragment
+            android:id="@+id/signUpFragment"
+            android:name="ru.dast_6_tino.androidx_navigation_example.login.SignUpFragment"
+            android:label="fragment_sign_up"
+            tools:layout="@layout/fragment_sign_up">
+            <action
+                android:id="@+id/action_signUpFragment_to_signInFragment"
+                app:destination="@id/signInFragment"
+                app:launchSingleTop="true"
+                app:popUpTo="@id/loginFlowFragment" />
+        </fragment>
+
+    </navigation>
+    <action
+        android:id="@+id/action_global_navigation_graph_login"
+        app:destination="@id/navigation_graph_login"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_global_navigation_graph_main"
+        app:destination="@id/navigation_graph_main"
+        app:launchSingleTop="true" />
+
+    <include app:graph="@navigation/navigation_main" />
+
+</navigation>

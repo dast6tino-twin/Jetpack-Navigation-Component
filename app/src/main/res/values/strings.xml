@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Androidx navigation example</string>
+
+    <string name="menu_list">List</string>
+    <string name="menu_left">Left</string>
+    <string name="menu_profile">Профиль</string>
+
+    <string name="action_back">Назад</string>
+    <string name="action_sign_in">Вход</string>
+    <string name="action_sign_up">Регистрация</string>
+    <string name="action_exit">Выход</string>
+    <string name="action_deeper">Глубже</string>
+
+    <string name="details_fragment_name">Имя %s</string>
+    <string name="details_fragment_breed">Порода %s</string>
+
+    <string name="fragment_login_flow_title">Hello!</string>
+    <string name="fragment_profile">Профиль</string>
+    <string name="fragment_left">Пам</string>
+    <string name="dog_image">Dog image</string>
+
+</resources>
