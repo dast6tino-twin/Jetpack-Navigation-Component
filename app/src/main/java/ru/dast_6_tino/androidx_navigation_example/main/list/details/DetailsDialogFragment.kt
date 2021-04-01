@@ -20,6 +20,7 @@ class DetailsDialogFragment : DialogFragment() {
 
     }
 
+    private val navController by lazy { findNavController() }
     private val item by lazy {
         arguments?.getParcelable<Dog>(EXTRA_ITEM)
             ?: throw NullPointerException("Item must not be null")
@@ -37,7 +38,7 @@ class DetailsDialogFragment : DialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val name = item.name
-        toolbar.setNavigationOnClickListener { findNavController().popBackStack() }
+        toolbar.setNavigationOnClickListener { navController.popBackStack() }
         toolbar.title = name
 
         nameTV.text = getString(R.string.details_fragment_name, name)

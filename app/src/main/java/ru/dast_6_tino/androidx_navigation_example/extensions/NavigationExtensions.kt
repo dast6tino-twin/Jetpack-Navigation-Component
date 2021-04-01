@@ -16,6 +16,8 @@ import ru.dast_6_tino.androidx_navigation_example.R
  * Manages the various graphs needed for a [BottomNavigationView].
  *
  * This sample is a workaround until the Navigation Component supports multiple back stacks.
+ *
+ * Source: https://github.com/android/architecture-components-samples/blob/master/NavigationAdvancedSample/app/src/main/java/com/example/android/navigationadvancedsample/NavigationExtensions.kt
  **/
 fun BottomNavigationView.setupWithNavController(
     navGraphIds: List<Int>,

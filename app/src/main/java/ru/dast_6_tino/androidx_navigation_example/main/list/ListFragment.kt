@@ -24,8 +24,9 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        adapter = ListAdapter(::onItemSelected)
-        adapter.setData()
+        adapter = ListAdapter()
+        adapter.setData(DogFactory.defaultItems)
+        adapter.setListener(::onItemSelected)
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
     }
